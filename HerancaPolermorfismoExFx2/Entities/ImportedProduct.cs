@@ -55,7 +55,7 @@ namespace HerancaPolermorfismoExFx2.Entities
                 + GetName() 
                 + " $" 
                 + TotalPrice(GetPrice()).ToString("F2", CultureInfo.InvariantCulture)
-                + " ("
+                + " (Customs fee: $"
                 + GetCustomFee().ToString("F2", CultureInfo.InvariantCulture)
                 + ") ";
         }

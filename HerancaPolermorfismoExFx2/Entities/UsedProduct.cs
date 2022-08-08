@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Text;
 
@@ -49,10 +50,10 @@ namespace HerancaPolermorfismoExFx2.Entities
         {
             return "Name Product: "
                 + GetName()
-                + " (used)"
+                + "(used)"
                 + " $"
-                + GetPrice().ToString()
-                + " (Manufacture: "
+                + GetPrice().ToString("F2", CultureInfo.InvariantCulture)
+                + " (Manufacture date: "
                 + GetManuFactureDate().ToString("dd/MM/yyyy")
                 +")";
         }
