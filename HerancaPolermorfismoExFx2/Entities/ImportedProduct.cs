@@ -12,7 +12,7 @@ namespace HerancaPolermorfismoExFx2.Entities
     internal class ImportedProduct : Product
     {
         //atributos da subClass
-        private double _customFree;
+        private double _customFee;
 
         //Construtor
         public ImportedProduct() 
@@ -21,22 +21,22 @@ namespace HerancaPolermorfismoExFx2.Entities
         }
 
         //aqui o construtor esta herdadando a base da Class Product
-        public ImportedProduct(string name, double price, double customFree )
+        public ImportedProduct(string name, double price, double customFee )
             : base(name, price)
         {
-            _customFree = customFree;
+            _customFee = customFee;
         }
 
         //Get e Set
-        public double GetCustomFree() {
+        public double GetCustomFee() {
 
-            return _customFree;
+            return _customFee;
 
         }
 
-        public void SetCustomFree(double customFree){
+        public void SetCustomFee(double customFee){
 
-            _customFree = customFree;
+            _customFee = customFee;
 
         }
 
@@ -44,7 +44,7 @@ namespace HerancaPolermorfismoExFx2.Entities
 
         public double TotalPrice(double price) {
 
-            return price + _customFree;
+            return price + _customFee;
 
         }
 
@@ -56,7 +56,7 @@ namespace HerancaPolermorfismoExFx2.Entities
                 + " $" 
                 + TotalPrice(GetPrice()).ToString("F2", CultureInfo.InvariantCulture)
                 + " ("
-                + GetCustomFree().ToString("F2", CultureInfo.InvariantCulture)
+                + GetCustomFee().ToString("F2", CultureInfo.InvariantCulture)
                 + ") ";
         }
     }
